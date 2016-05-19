@@ -19,3 +19,9 @@ win7:
 3.install boa-constructor
    i do not download boa-constructor-0.6.1.src.zip from sourceforge,because this version is very old,has problem when running,which ask you
    'NO-3D' problem, instead i download a clone version from bitbucket.org ,it has been tested ok, the address is https://bitbucket.org/cwt/boa-constructor/downloads, and the downloaded package name is cwt-boa-constructor-fc7a7a661661.zip. after download this package you need to unzip it under c:/Python27/Lib/site-packages/  and then run Boa.py, it should be ok
+
+4. install git for windows
+    download Git-2.8.2-64-bit.exe from github and install it, it will create git bash app and git GUI app, then after install you need to use
+	git bash to config, it is same with linux environment, #git config --global user.name your_name, #git config --global user.email your@email.com
+
+5. install notepad++ edit tools
