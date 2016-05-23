@@ -14,6 +14,16 @@ def create(parent):
 ] = [wx.NewId() for _init_coll_File_Items in range(2)]
 
 class mainFrame(wx.Frame):
+    def _init_coll_mainFrameSizer_Items(self, parent):
+        # generated method, don't edit
+
+        parent.AddSizer(self.comIndexBoxSizer, 1, border=2,
+              flag=wx.EXPAND | wx.TOP | wx.LEFT | wx.RIGHT)
+        parent.AddSizer(self.portFolioBoxSizer, 20, border=2,
+              flag=wx.EXPAND | wx.LEFT | wx.RIGHT)
+        parent.AddSizer(self.realTimerBoxSizer, 5, border=2,
+              flag=wx.EXPAND | wx.LEFT | wx.BOTTOM | wx.RIGHT)
+
     def _init_coll_menuBar_Menus(self, parent):
         # generated method, don't edit
 
@@ -37,6 +47,20 @@ class mainFrame(wx.Frame):
 
         parent.SetStatusWidths([-1])
 
+    def _init_sizers(self):
+        # generated method, don't edit
+        self.mainFrameSizer = wx.BoxSizer(orient=wx.VERTICAL)
+
+        self.comIndexBoxSizer = wx.BoxSizer(orient=wx.HORIZONTAL)
+
+        self.portFolioBoxSizer = wx.BoxSizer(orient=wx.HORIZONTAL)
+
+        self.realTimerBoxSizer = wx.BoxSizer(orient=wx.HORIZONTAL)
+
+        self._init_coll_mainFrameSizer_Items(self.mainFrameSizer)
+
+        self.MainFramePanel.SetSizer(self.mainFrameSizer)
+
     def _init_utils(self):
         # generated method, don't edit
         self.menuBar = wx.MenuBar()
@@ -49,7 +73,7 @@ class mainFrame(wx.Frame):
     def _init_ctrls(self, prnt):
         # generated method, don't edit
         wx.Frame.__init__(self, id=wxID_MAINFRAME, name=u'mainFrame',
-              parent=prnt, pos=wx.Point(499, 133), size=wx.Size(1121, 607),
+              parent=prnt, pos=wx.Point(443, 132), size=wx.Size(1121, 607),
               style=wx.DEFAULT_FRAME_STYLE, title=u'ialphastock')
         self._init_utils()
         self.SetClientSize(wx.Size(1113, 580))
@@ -69,6 +93,8 @@ class mainFrame(wx.Frame):
         self.MainFramePanel = wx.Panel(id=wxID_MAINFRAMEMAINFRAMEPANEL,
               name=u'MainFramePanel', parent=self, pos=wx.Point(0, 0),
               size=wx.Size(1113, 541), style=wx.TAB_TRAVERSAL)
+
+        self._init_sizers()
 
     def __init__(self, parent):
         self._init_ctrls(parent)
