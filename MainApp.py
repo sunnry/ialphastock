@@ -1,22 +1,19 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#Boa:App:BoaApp
-
 import wx
+import gui
 
-import MainFrame
+class MFrame(gui.MainFrame):
+    def __init__(self,parent):
+        gui.MainFrame.__init__(self,parent)
 
-modules ={u'MainFrame': [1, 'Main frame of Application', u'MainFrame.py']}
-
-class BoaApp(wx.App):
+class MApp(wx.App):
     def OnInit(self):
-        self.main = MainFrame.create(None)
-        self.main.Show()
-        self.SetTopWindow(self.main)
+        self.frame = MFrame(None)
+        self.SetTopWindow(self.frame)
+        self.frame.Show(True)
         return True
 
 def main():
-    application = BoaApp(0)
+    application = MApp(redirect=False)
     application.MainLoop()
 
 if __name__ == '__main__':
